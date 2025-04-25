@@ -1,0 +1,20 @@
+FROM node:20.12.2-alpine3.18 AS base
+
+ENV NODE_ENV=local
+
+ENV TZ=America/Chicago
+RUN apk add --no-cache tzdata
+RUN cp /usr/share/zoneinfo/$TZ /etc/localtime
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+WORKDIR /app
+
+COPY src/package*.json .
+
+RUN npm install && npm cache clean --force
+
+COPY src .
+
+FROM base AS local
+
+CMD npm run dev

@@ -1,0 +1,245 @@
+<article>
+  <div class="header">
+    <table>
+      <tr>
+        <td class="header_logo">
+          <img src="{{frontend1}}/logo.webp" alt="icon-marca" />
+        </td>
+
+        <td class="header_text">
+          <p>{{date}}</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <section class="content_principal">
+    <div class="tittle">
+      <h3>Código de recuperación</h3>
+    </div>
+    <div class="container">
+      <h3>
+        A continuación compartimos el código de 6 dígitos para recuperar y
+        actualizar tu contraseña
+      </h3>
+      <p>
+        Recuerda que este código es el que debes copiar y pegar en el sistema
+        para continuar con tu proceso de actualización
+      </p>
+
+      <div class="code">
+        <p>
+          <span>{{one}}</span>
+          <span>{{two}}</span>
+          <span>{{three}}</span>
+          <span>{{four}}</span>
+          <span>{{five}}</span>
+          <span>{{six}}</span>
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class="logo">
+    <img src="{{frontend2}}/logo.webp" alt="icon-marca" />
+  </div>
+
+  <div class="footer">
+    <p>
+      Apreciamos tu pronta atención a este asunto. Si tienes alguna pregunta o
+      necesitas más detalles no dudes en ponerte en contacto con nosotros al
+      correo <span>support@diplomado.com</span>.
+    </p>
+    <p>Gracias por tu colaboración y compromiso continuo con Portal diplomado</p>
+  </div>
+</article>
+
+<head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    body {
+      margin: 0 auto;
+      background: #f4f4f4;
+      border-radius: 10px;
+      padding: 50px;
+      display: grid;
+      place-content: center;
+    }
+
+    article {
+      background: white;
+      text-align: center;
+      width: 680px;
+      margin: 0 auto;
+    }
+
+    article .header {
+      text-align: center;
+      height: 70px;
+      padding: 30px 40px 0 40px;
+    }
+
+    article .header img {
+      width: 120px;
+      object-fit: contain;
+    }
+
+    article .header table {
+      width: 100%;
+      margin: 0;
+    }
+
+    article .header table td.header_logo {
+      text-align: left;
+    }
+
+    article .header table td.header_text {
+      text-align: right;
+    }
+
+    section.content_principal {
+      padding: 30px 40px;
+    }
+
+    section.content_principal div.tittle h3 {
+      color: #6b9af9;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    section.content_principal div.tittle h2 {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 34px;
+    }
+
+    div.title,
+    div.container,
+    div.logo {
+      margin-top: 20px;
+    }
+
+    section.content_principal div.container {
+      background-color: #f4f4f4;
+      border-radius: 12px;
+      padding: 40px 60px;
+    }
+
+    section.content_principal div.container h3 {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 26px;
+      margin-bottom: 25px;
+    }
+
+    section.content_principal div.container p {
+      margin-bottom: 25px;
+    }
+
+    section.content_principal div.container div.code {
+      height: 60px;
+    }
+
+    section.content_principal div.container div.code p {
+      line-height: 60px;
+    }
+
+    section.content_principal div.container div.code p span {
+      background: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      overflow: hidden;
+      text-align: center;
+      text-overflow: ellipsis;
+      font-family: Roboto;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 34px;
+    }
+
+    div.logo {
+      background-color: #accefb;
+      height: 80px;
+      text-align: center;
+      min-width: 100%;
+    }
+
+    div.logo img {
+      height: 40px;
+      padding: 20px 0;
+    }
+
+    div.footer {
+      border-top: 1px solid #89939e;
+      padding: 30px 20px;
+      margin: 20px 50px 20px 50px;
+      color: #89939e;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: center;
+      font-variation-settings: "wdth" 100;
+    }
+
+    div.footer span {
+      color: #373737;
+    }
+
+    div.footer p:nth-child(1) {
+      margin-bottom: 25px;
+    }
+
+    div.footer p:nth-child(2) {
+      width: 260px;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 450px) {
+      article {
+        width: 350px;
+        height: auto;
+      }
+
+      section.content_principal div.tittle h3 {
+        font-size: 16px;
+      }
+
+      section.content_principal div.tittle h2 {
+        font-size: 18px;
+      }
+
+      section.content_principal div.container h3 {
+        font-size: 16px;
+      }
+
+      article .header {
+        text-align: center;
+        height: 70px;
+        padding: 10px 20px;
+      }
+
+      section.content_principal {
+        padding: 10px 20px;
+      }
+
+      section.content_principal div.container {
+        padding: 10px 30px;
+      }
+
+      div.footer {
+        border-top: 1px solid #89939e;
+        padding: 30px 20px;
+        margin: 10px 20px;
+      }
+    }
+  </style>
+</head>

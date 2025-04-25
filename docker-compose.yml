@@ -1,0 +1,30 @@
+services:
+  server:
+    environment:
+      - NODE_ENV=local
+    hostname: diplomado_services_server
+    container_name: diplomado_services_server
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      target: base
+    ports:
+      - 4004:4004
+    command: >
+      sh -c "npm run dev"
+    volumes:
+      - ./src/src:/app/src
+
+  diplomado_db:
+    image: mongo:7.0.18
+    hostname: diplomado_db
+    container_name: diplomado_db
+    restart: unless-stopped
+    volumes:
+      - diplomado_db:/data/db
+    ports:
+      - 27017:27017
+
+volumes:
+  diplomado_db:

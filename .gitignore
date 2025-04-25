@@ -1,0 +1,12 @@
+node_modules
+.DS_Store
+.env
+dbdata
+package-lock.json
+
+# terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+**/ssh-keys/wiedii-dev.pem
+**/ssh-keys/wiedii-dev.pub
